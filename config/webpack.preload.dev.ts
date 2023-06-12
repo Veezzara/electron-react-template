@@ -3,12 +3,10 @@ import EnvOption from "../utils/env-options";
 import projectPaths from "./project-paths";
 import path from "path";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
+import getEnvironment from "../utils/get-environment";
+import nullThrow from "../utils/null-throw";
 
-// TODO make util function to get environment;
-
-if (!process.env.NODE_ENV) throw new Error("Environment is not defined.");
-
-const environment = EnvOption[process.env.NODE_ENV as keyof typeof EnvOption];
+const environment: EnvOption = nullThrow(getEnvironment());
 
 const preloadDevConfig: Configuration = {
   mode: environment,

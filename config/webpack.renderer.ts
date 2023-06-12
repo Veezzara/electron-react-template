@@ -7,10 +7,10 @@ import prodRendererConfig from "./webpack.renderer.prod";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
+import getEnvironment from "../utils/get-environment";
+import nullThrow from "../utils/null-throw";
 
-if (!process.env.NODE_ENV) throw new Error("Environment is not defined.");
-
-const environment = EnvOption[process.env.NODE_ENV as keyof typeof EnvOption];
+const environment = nullThrow(getEnvironment());
 
 const baseRendererConfig: Configuration = {
   mode: environment,

@@ -2,10 +2,10 @@ import { Configuration } from "webpack";
 import EnvOption from "../utils/env-options";
 import path from "path";
 import projectPaths from "./project-paths";
+import nullThrow from "../utils/null-throw";
+import getEnvironment from "../utils/get-environment";
 
-if (!process.env.NODE_ENV) throw new Error("Environment is not defined.");
-
-const environment = EnvOption[process.env.NODE_ENV as keyof typeof EnvOption];
+const environment: EnvOption = nullThrow(getEnvironment());
 
 const mainProcessConfig: Configuration = {
   mode: environment,
