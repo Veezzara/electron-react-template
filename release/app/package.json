@@ -1,0 +1,11 @@
+{
+  "name": "electron-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/main/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC"
+}
