@@ -18,7 +18,7 @@ const preloadDevConfig: Configuration = {
   },
   plugins: [new CleanWebpackPlugin()],
   resolve: {
-    extensions: [".js", ".ts"],
+    extensions: ["", ".js", ".ts"],
   },
   module: {
     rules: [
@@ -26,6 +26,10 @@ const preloadDevConfig: Configuration = {
         test: /\.ts$/,
         exclude: /node_modules/,
         use: ["ts-loader"],
+      },
+      {
+        test: /\.node$/,
+        loader: "node-loader",
       },
     ],
   },

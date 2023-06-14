@@ -1,4 +1,7 @@
 import { contextBridge } from "electron";
-import bridge from "./bridge";
+import versionsExposes from "./exposes/versions";
+import credentialsExposes from "./exposes/credentials-expose";
 
-contextBridge.exposeInMainWorld("bridge", bridge);
+contextBridge.exposeInMainWorld("versions", versionsExposes);
+contextBridge.exposeInMainWorld("credentialsService", credentialsExposes);
+
