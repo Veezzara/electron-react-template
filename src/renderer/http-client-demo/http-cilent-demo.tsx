@@ -17,11 +17,11 @@ const HttpClientDemo = () => {
       <h2>HTTP Client Demo</h2>
       {posts.map((post, index) => {
         return (
-          <>
-            <div key={index}>{JSON.stringify(post)}</div>
+          <div key={index}>
+            <span>{JSON.stringify(post)}</span>
             <br />
             <br />
-          </>
+          </div>
         );
       })}
     </div>
