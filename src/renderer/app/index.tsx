@@ -1,4 +1,5 @@
 import CredentialsDemo from "../credentials-demo/credentials-demo";
+import HttpClientDemo from "../http-client-demo/http-cilent-demo";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <br />
       <br />
       <CredentialsDemo />
+      <HttpClientDemo />
     </main>
   );
 };
