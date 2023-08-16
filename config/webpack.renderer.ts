@@ -87,7 +87,6 @@ const baseRendererConfig: Configuration = {
         ],
         exclude: /\.module\.css$/,
       },
-
       {
         test: /\.svg$/,
         use: ["@svgr/webpack"],
