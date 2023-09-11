@@ -1,12 +1,13 @@
-import { Configuration } from "webpack";
-import EnvOption from "../utils/env-options";
 import path from "path";
-import projectPaths from "./project-paths";
-import devRendererConfig from "./webpack.renderer.dev";
-import prodRendererConfig from "./webpack.renderer.prod";
+import { Configuration } from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
+import { merge } from "webpack-merge";
+import EnvOption from "../utils/env-options";
+import projectPaths from "./project-paths";
+import devRendererConfig from "./webpack.renderer.dev";
+import prodRendererConfig from "./webpack.renderer.prod";
 import getEnvironment from "../utils/get-environment";
 import nullThrow from "../utils/null-throw";
 
@@ -100,4 +101,4 @@ const environmentConfig =
     ? devRendererConfig
     : prodRendererConfig;
 
-export default { ...baseRendererConfig, ...environmentConfig };
+export default merge(baseRendererConfig, environmentConfig);

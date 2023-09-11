@@ -1,5 +1,5 @@
-import CredentialsDemo from "../credentials-demo/credentials-demo";
-import HttpClientDemo from "../http-client-demo/http-client-demo";
+// import CredentialsDemo from "../credentials-demo/credentials-demo";
+// import HttpClientDemo from "../http-client-demo/http-client-demo";
 
 const App = () => {
   return (
