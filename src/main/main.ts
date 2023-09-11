@@ -3,6 +3,7 @@ import { BrowserWindow, app } from "electron";
 import resolveHtmlPath from "./utils/resolve-html-path";
 import EnvOption from "../../utils/env-options";
 import projectPaths from "../../config/project-paths";
+import setupIpcHandlers from "./ipc-handlers/setup-handlers";
 
 const createWindow = async () => {
   const mainWindow = new BrowserWindow({
@@ -23,6 +24,7 @@ const createWindow = async () => {
 };
 
 app.whenReady().then(() => {
+  setupIpcHandlers();
   createWindow();
   app.on("activate", () => {
     if (BrowserWindow.getAllWindows().length === 0) {
