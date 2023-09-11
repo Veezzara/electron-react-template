@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const App = () => {
   useEffect(() => {
-    bridge.ipcExposes.testHandling("some message").then((result) => {
+    bridge.ipcExposes.testHandler("some message").then((result) => {
       console.log(result);
     });
   }, []);

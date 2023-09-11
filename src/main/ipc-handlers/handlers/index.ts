@@ -1,7 +1,7 @@
 import testHandler from "./test-handler";
 
 const handlers = {
-  testHandling: testHandler,
+  testHandler,
 };
 
 export default handlers;
