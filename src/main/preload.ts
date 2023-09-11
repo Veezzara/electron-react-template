@@ -1,4 +1,4 @@
 import { contextBridge } from "electron";
-import versionsExposes from "./exposes/versions";
+import exposes from "./exposes";
 
-contextBridge.exposeInMainWorld("versions", versionsExposes);
+contextBridge.exposeInMainWorld("bridge", exposes);

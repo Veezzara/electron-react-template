@@ -11,8 +11,7 @@ const createWindow = async () => {
         process.env.NODE_ENV === EnvOption.Production
           ? path.join(__dirname, "preload.js")
           : path.join(projectPaths.preload, "preload.js"),
-      devTools: true,
-      nodeIntegration: true,
+      devTools: process.env.NODE_ENV === EnvOption.Development,
     },
   });
 

@@ -33,6 +33,7 @@ const preloadDevConfig: Configuration = {
       },
     ],
   },
+  watch: true,
 };
 
 export default preloadDevConfig;
