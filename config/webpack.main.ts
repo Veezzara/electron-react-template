@@ -2,10 +2,10 @@ import { Configuration } from "webpack";
 import EnvOption from "../utils/env-options";
 import path from "path";
 import projectPaths from "./project-paths";
-import nullThrow from "../utils/null-throw";
+import nullishThrow from "../utils/nullish-throw";
 import getEnvironment from "../utils/get-environment";
 
-const environment: EnvOption = nullThrow(getEnvironment());
+const environment: EnvOption = nullishThrow(getEnvironment());
 
 const mainProcessConfig: Configuration = {
   mode: environment,

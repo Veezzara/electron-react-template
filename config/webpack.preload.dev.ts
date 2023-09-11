@@ -4,9 +4,9 @@ import projectPaths from "./project-paths";
 import path from "path";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import getEnvironment from "../utils/get-environment";
-import nullThrow from "../utils/null-throw";
+import nullishThrow from "../utils/nullish-throw";
 
-const environment: EnvOption = nullThrow(getEnvironment());
+const environment: EnvOption = nullishThrow(getEnvironment());
 
 const preloadDevConfig: Configuration = {
   mode: environment,

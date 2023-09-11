@@ -9,9 +9,9 @@ import projectPaths from "./project-paths";
 import devRendererConfig from "./webpack.renderer.dev";
 import prodRendererConfig from "./webpack.renderer.prod";
 import getEnvironment from "../utils/get-environment";
-import nullThrow from "../utils/null-throw";
+import nullishThrow from "../utils/nullish-throw";
 
-const environment = nullThrow(getEnvironment());
+const environment = nullishThrow(getEnvironment());
 
 const baseRendererConfig: Configuration = {
   mode: environment,

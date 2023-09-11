@@ -1,4 +1,4 @@
-const nullThrow = <T>(
+const nullishThrow = <T>(
   value: T | null | undefined,
   message: string = "Value is null or undefined",
 ) => {
@@ -9,4 +9,4 @@ const nullThrow = <T>(
   return value;
 };
 
-export default nullThrow;
+export default nullishThrow;
