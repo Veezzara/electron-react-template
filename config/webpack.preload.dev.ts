@@ -1,8 +1,8 @@
+import path from "path";
 import { Configuration } from "webpack";
+import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import EnvOption from "../utils/env-options";
 import projectPaths from "./project-paths";
-import path from "path";
-import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import getEnvironment from "../utils/get-environment";
 import nullishThrow from "../utils/nullish-throw";
 

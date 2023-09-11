@@ -1,7 +1,7 @@
-import { BrowserWindow, app } from "electron";
-import { resolveHtmlPath } from "./utils/resolve-html-path";
-import EnvOption from "../../utils/env-options";
 import path from "path";
+import { BrowserWindow, app } from "electron";
+import resolveHtmlPath from "./utils/resolve-html-path";
+import EnvOption from "../../utils/env-options";
 import projectPaths from "../../config/project-paths";
 
 const createWindow = async () => {
@@ -12,7 +12,7 @@ const createWindow = async () => {
           ? path.join(__dirname, "preload.js")
           : path.join(projectPaths.preload, "preload.js"),
       devTools: true,
-      nodeIntegration: true
+      nodeIntegration: true,
     },
   });
 

@@ -7,8 +7,7 @@
     "plugin:react/recommended",
     "airbnb",
     "airbnb-typescript",
-    "plugin:prettier/recommended",
-    "plugin:react/jsx-runtime"
+    "prettier"
   ],
   "overrides": [
     {
@@ -30,7 +29,7 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "linebreak-style": "off",
     "quotes": [
@@ -65,6 +64,7 @@
     "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
     "no-param-reassign": "off",
     "react/jsx-props-no-spreading": ["warn", { "html": "ignore" }],
+    "react/react-in-jsx-scope": "off",
     "no-continue": "off"
   }
 }

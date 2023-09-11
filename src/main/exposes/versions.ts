@@ -5,4 +5,4 @@ const versionsExposes = {
 };
 
 export default versionsExposes;
-export type versionsExposesType = typeof versionsExposes;
+export type VersionsExposesType = typeof versionsExposes;

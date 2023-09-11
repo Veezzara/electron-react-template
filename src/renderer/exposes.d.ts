@@ -1,10 +1,10 @@
-type versionsExposesType =
-  import("../main/exposes/versions").versionsExposesType;
-type credentialsExposesType =
-  import("../main/exposes/credentials-expose").credentialsExposesType;
-type apiClientExposeType =
-  import("../main/exposes/api-client-expose").apiClientExposeType;
+type VersionsExposesType =
+  import("../main/exposes/versions").VersionsExposesType;
+type CredentialsExposesType =
+  import("../main/exposes/credentials-expose").CredentialsExposesType;
+type ApiClientExposeType =
+  import("../main/exposes/api-client-expose").ApiClientExposeType;
 
 declare const versions: versionsType;
-declare const credentialsService: credentialsExposesType;
-declare const apiClient: apiClientExposeType;
+declare const credentialsService: CredentialsExposesType;
+declare const apiClient: ApiClientExposeType;

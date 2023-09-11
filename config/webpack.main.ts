@@ -1,6 +1,6 @@
+import path from "path";
 import { Configuration } from "webpack";
 import EnvOption from "../utils/env-options";
-import path from "path";
 import projectPaths from "./project-paths";
 import nullishThrow from "../utils/nullish-throw";
 import getEnvironment from "../utils/get-environment";
